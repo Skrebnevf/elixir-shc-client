@@ -10,19 +10,19 @@ It is designed for experimenting with secure communication over SSL in Elixir an
 
 ## Features
 
-- SSL/TLS connection to a chat server  
-- Certificate fingerprint verification via environment variable  
-- Interactive prompts for host, port, and password  
-- Password-based authentication handshake  
-- Continuous message listening loop  
-- Interactive message sending loop  
-- Automatic reconnection on errors, timeouts, or closed connections  
+- SSL/TLS connection to a chat server
+- Certificate fingerprint verification via environment variable
+- Interactive prompts for host, port, and password
+- Password-based authentication handshake
+- Continuous message listening loop
+- Interactive message sending loop
+- Automatic reconnection on errors, timeouts, or closed connections
 
 ## Environment Variables
 
 - `CHAT_SERVER_FINGERPRINT`  
   If set, the client verifies the server's certificate fingerprint against this value.  
-  If not set, the client will connect insecurely and accept any certificate.  
+  If not set, the client will connect insecurely and accept any certificate.
 
 ## Usage
 
