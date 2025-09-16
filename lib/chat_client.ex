@@ -181,10 +181,12 @@ defmodule ChatClient.Client do
         message = String.trim(msg)
 
         if message != "" do
-          message_data = %{
-            "type" => "chat",
-            "text" => message
-          }
+          message_data =
+            if String.starts_with?(message, "/") do
+              %{"type" => "kill", "text" => message}
+            else
+              %{"type" => "chat", "text" => message}
+            end
 
           encoded_message = ChatClient.Protocol.encode_message(message_data)
 
